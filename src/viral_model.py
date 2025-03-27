@@ -2,7 +2,7 @@ from typing import List
 from collections import defaultdict
 import numpy
 
-from src.models import ExtSEIRSNetworkModel
+from models import ExtSEIRSNetworkModel
 
 # range for uniform sampling of key parameters for temporal VL progression
 # VL_PARAMS = {
@@ -263,9 +263,9 @@ class ViralExtSEIRNetworkModel(ExtSEIRSNetworkModel):
         household_neighbors = set(self.households_dict[infected]) - set([infected])
         non_household_neighbors = list(set(neighbors) - set(household_neighbors))
 
-        print(f"infected: {infected}, transmissionTerms_I: {self.transmissionTerms_I[infected]}, transmissionTerms_Q: {self.transmissionTerms_Q[infected]}, household_neighbors: {household_neighbors}, non_household_neighbors: {non_household_neighbors}")
-        print(f"Household member states: {[self.X[j][0] for j in household_neighbors]}")
-        print(f"Non-household member states: {[self.X[j][0] for j in non_household_neighbors]}")
+        # print(f"infected: {infected}, transmissionTerms_I: {self.transmissionTerms_I[infected]}, transmissionTerms_Q: {self.transmissionTerms_Q[infected]}, household_neighbors: {household_neighbors}, non_household_neighbors: {non_household_neighbors}")
+        # print(f"Household member states: {[self.X[j][0] for j in household_neighbors]}")
+        # print(f"Non-household member states: {[self.X[j][0] for j in non_household_neighbors]}")
 
 
         if len(neighbors) == 0:

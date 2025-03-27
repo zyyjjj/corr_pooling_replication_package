@@ -3,8 +3,8 @@ import numpy
 import scipy
 from collections import defaultdict
 import networkx
-from . import FARZ
-from .models import *
+import FARZ
+from models import *
 
 import matplotlib.pyplot as pyplot
 

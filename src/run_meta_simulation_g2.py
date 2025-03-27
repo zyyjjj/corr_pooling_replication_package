@@ -17,12 +17,12 @@ import argparse
 import copy
 import numpy as np
 
-from src.networks import (
+from networks import (
     generate_demographic_contact_network,
     household_country_data,
 )
-from src.sim_loops_pooled_test import SimulationRunner
-from src.viral_model import ViralExtSEIRNetworkModel, VL_PARAMS
+from sim_loops_pooled_test import SimulationRunner
+from viral_model import ViralExtSEIRNetworkModel, VL_PARAMS
 
 
 def run_simulation(

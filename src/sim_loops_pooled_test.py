@@ -11,9 +11,9 @@ import copy
 
 import numpy as np
 from networkx import Graph
-from src.assignment import embed_nodes, get_equal_sized_clusters
-from src.pooled_test import OneStageGroupTesting
-from src.viral_model import ViralExtSEIRNetworkModel
+from assignment import embed_nodes, get_equal_sized_clusters
+from pooled_test import OneStageGroupTesting
+from viral_model import ViralExtSEIRNetworkModel
 
 
 class SimulationRunner:
@@ -204,7 +204,7 @@ class SimulationRunner:
                 for x in pool if self.model.current_VL[x]>0
             ] for pool,vl in zip(pools,viral_loads) if max(vl)>0
         ]
-        print("Viral loads in positive pools: ", viral_loads_in_positive_pools)
+        # print("Viral loads in positive pools: ", viral_loads_in_positive_pools)
         group_testing = OneStageGroupTesting(
             ids=pools, 
             viral_loads=viral_loads,
