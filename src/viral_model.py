@@ -322,7 +322,7 @@ class ViralExtSEIRNetworkModel(ExtSEIRSNetworkModel):
                 )
         
 
-        print(f"Infected node {infected} got contribution from infectious contacts {total_contribution} and quarantined contacts {total_contribution_Q}")
+        # print(f"Infected node {infected} got contribution from infectious contacts {total_contribution} and quarantined contacts {total_contribution_Q}")
 
 
     def run_iteration(self, max_dt=None):
