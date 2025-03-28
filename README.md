@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is the code package for the paper 'Correlation Improves Group Testing: Modeling Concentration-Dependent Test Errors', to appear in Management Science. We conduct rigorous theoretical analysis and realistic simulation to understand the benefit of accounting for correlation and concentration-dependent test errors in group testing for large-scale screening of infectious diseases.
+This is the code package for the paper 'Correlation Improves Group Testing: Modeling Concentration-Dependent Test Errors', to appear in Management Science. We conduct rigorous theoretical analysis and realistic simulation to understand the benefit of accounting for correlation and concentration-dependent test errors in group testing for repeated large-scale screening of infectious diseases.
 
 We provide information about the simulation in this folder.
 
