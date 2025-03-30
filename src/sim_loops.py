@@ -1,3 +1,5 @@
+# Origin: https://github.com/ryansmcgee/seirsplus/blob/master/seirsplus/sim_loops.py
+
 from __future__ import division
 
 import pickle

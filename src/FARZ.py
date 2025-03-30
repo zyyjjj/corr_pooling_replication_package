@@ -1,3 +1,5 @@
+# Origin: https://github.com/ryansmcgee/seirsplus/blob/master/seirsplus/FARZ.py
+
 #################################################
 # Adapted from https://github.com/rabbanyk/FARZ
 #################################################

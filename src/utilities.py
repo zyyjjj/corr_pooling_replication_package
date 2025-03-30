@@ -1,3 +1,5 @@
+# Origin: https://github.com/ryansmcgee/seirsplus/blob/master/seirsplus/utilities.py
+
 import numpy
 import matplotlib.pyplot as pyplot
 

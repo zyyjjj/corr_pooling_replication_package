@@ -1,3 +1,5 @@
+# Origin: https://github.com/ryansmcgee/seirsplus/blob/master/seirsplus/models.py
+
 from __future__ import absolute_import, division, print_function
 
 import networkx as networkx

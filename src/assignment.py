@@ -1,7 +1,4 @@
-import os
-import sys
 from typing import Any, Dict, Optional, Tuple
-
 import numpy as np
 from gensim.models import Word2Vec
 from networkx import Graph

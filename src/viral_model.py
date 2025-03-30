@@ -4,30 +4,6 @@ import numpy
 
 from models import ExtSEIRSNetworkModel
 
-# range for uniform sampling of key parameters for temporal VL progression
-# VL_PARAMS = {
-#     "symptomatic": {
-#         "start_peak": (1, 3), # I_pre
-#         "end_peak": (4, 6), # I_sym
-#         "start_tail": (11.5, 13.5), # I_sym
-#         "end_tail": (15, 17), # R
-#         # "peak_height": (7.5, 10),
-#         # "tail_height": (3.5, 6)
-#         "peak_height": (7, 7),
-#         "tail_height": (3, 3.5)
-#     },
-#     "asymptomatic": {
-#         "start_peak": (1, 3), # I_pre
-#         "end_peak": (4, 6), # I_asym
-#         "start_tail": (11, 11), # I_asym
-#         "end_tail": (11, 11), # R
-#         # "peak_height": (5, 7),
-#         # "tail_height": (3, 3.5)
-#         "peak_height": (7, 7),
-#         "tail_height": (3, 3.5)
-#     }
-# }
-
 VL_PARAMS = {
     "symptomatic": {
         # "start_peak": (2.19, 5.26),
@@ -37,8 +13,6 @@ VL_PARAMS = {
         "dt_decay": (7, 10), 
         "dt_tail": (5, 6), 
         "peak_height": (7, 7),
-        # "tail_height": (4, 4)
-        # "peak_height": (6.5, 6.5),
         "tail_height": (3, 3)
     },
     "asymptomatic": {
@@ -49,32 +23,9 @@ VL_PARAMS = {
         "dt_decay": (7, 10), 
         "dt_tail": (5, 6), 
         "peak_height": (7, 7),
-        # "tail_height": (4, 4)
-        # "peak_height": (6.5, 6.5),
         "tail_height": (3, 3)
     }
 }
-
-# VL_PARAMS = {
-#     "symptomatic": {
-#         "start_peak": (1, 1), # I_pre
-#         "end_peak": (10, 10), # I_sym
-#         "start_tail": (11, 11), # I_sym
-#         "end_tail": (15, 15), # R
-#         # "peak_height": (3, 5),
-#         "peak_height": (4,6), 
-#         "tail_height": (-1, -1)
-#     },
-#     "asymptomatic": {
-#         "start_peak": (1, 1), # I_pre
-#         "end_peak": (10, 10), # I_sym
-#         "start_tail": (11, 11), # I_sym
-#         "end_tail": (15, 15), # R
-#         # "peak_height": (3, 5),
-#         "peak_height": (4,6), 
-#         "tail_height": (-1, -1)
-#     }
-# }
 
 
 class ViralExtSEIRNetworkModel(ExtSEIRSNetworkModel):
@@ -266,7 +217,6 @@ class ViralExtSEIRNetworkModel(ExtSEIRSNetworkModel):
         # print(f"infected: {infected}, transmissionTerms_I: {self.transmissionTerms_I[infected]}, transmissionTerms_Q: {self.transmissionTerms_Q[infected]}, household_neighbors: {household_neighbors}, non_household_neighbors: {non_household_neighbors}")
         # print(f"Household member states: {[self.X[j][0] for j in household_neighbors]}")
         # print(f"Non-household member states: {[self.X[j][0] for j in non_household_neighbors]}")
-
 
         if len(neighbors) == 0:
             return

@@ -1,15 +1,3 @@
-"""
-We had memory issues earlier when running sims with multiprocessing locally on 
-whale. This script is a workaround to enable running simulations on G2. 
-Multiprocessing:
-- pass in a yaml file with the different param values
-- specify the number of seeds in command line
-- specify the params to vary in command line
-G2:
-- have argparse function specify default parameter values (no need for yaml)
-- specify the seed and param value in command line
-- write a nested loop in a shell script that iterates over different seeds and param values
-"""
 import os
 import random
 from typing import Optional
@@ -178,7 +166,6 @@ def parse():
 
 
 def run_simulation_wrapper(kwargs):
-    # for pooling_strategy in ["naive", "correlated"]:
     for pooling_strategy in kwargs["pooling_method"]:
         print(kwargs)
         print("Running simulation with pooling strategy: ", pooling_strategy)
