@@ -15,7 +15,7 @@ We provide information about the simulation in this folder.
 
 - src/
 	- Our simulation codebase is partly based on the SEIRS+ library (https://github.com/ryansmcgee/seirsplus). In particular, `FARZ.py`, `models.py`, `networks.py`, and `utilities.py` are inherited from SEIRS+. 
-	- `assignment.py`: assignment of screening groups and formation of community and household-correlated pools
+	- `assignment.py`: assignment of screening groups and formation of community and household-correlated pools.
 	- `pooled_test.py`: implementation of the two-stage Dorfman procedure.
 	- `viral_model.py`: an extended SEIRS+ stochastic network model, `ViralExtSEIRNetworkModel`, where each node has a viral load that is dynamically updated as time progresses and they transition through different states. 
 	- `sim_loops_pooled_test.py`: the runner class of the `ViralExtSEIRNetworkModel` model 	that enables simulation and logging.
@@ -37,10 +37,10 @@ We provide information about the simulation in this folder.
 Our results in the paper are based on 200 trials per parameter configuration (screening policy and test error model). We aggregate the raw simulation results by computing several key metric statistics, which are then used for further analysis and visualization. 
 
 
-Here, we demonstrate how to run 10 trials for an example policy of screening every 5 days using a pool size of 10, under a test error model that accounts for the dilution effect. The script `src/run_experiments.sh` initiates the simulation runs with results saved under `data/raw`. The notebook `notebooks/aggregate_raw_data.ipynb` shows how to convert the raw simulation results into aggregated data files, saved under `data/aggregated`.
+Here, we demonstrate how to run 10 trials for an example policy of screening every 5 days using a pool size of 10, under a test error model that accounts for the dilution effect. The script `src/run_experiments.sh` initiates the simulation runs with results saved under `data/raw/`. The notebook `notebooks/aggregate_raw_data.ipynb` shows how to convert the raw simulation results into aggregated data files, saved under `data/aggregated/`.
 
 
-We also include the aggregated data from the complete simulation runs under `data/aggregated_final`. The notebook `notebooks/aggregate_raw_data_final.ipynb` logs the process of converting the complete raw simulation results into aggregated files. All figure reproduction notebooks are based on the data in `data/aggregated_final`.
+We also include the aggregated data from the complete simulation runs under `data/aggregated_final/`. The notebook `notebooks/aggregate_raw_data_final.ipynb` logs the process of converting the complete raw simulation results into aggregated files. All figure reproduction notebooks are based on the data in `data/aggregated_final/`.
 
 
 ## How to run simulation trials
