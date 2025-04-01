@@ -37,7 +37,7 @@ We provide information about the simulation in this folder.
 Our results in the paper are based on 200 trials per parameter configuration (screening policy and test error model). We aggregate the raw simulation results by computing several key metric statistics, which are then used for further analysis and visualization. 
 
 
-Here, we demonstrate how to run 10 trials for an example policy of screening every 5 days using a pool size of 10, under a test error model that accounts for the dilution effect. The script `src/run_experiments.sh` initiates the simulation runs with results saved under `data/raw/`. The notebook `notebooks/aggregate_raw_data.ipynb` shows how to convert the raw simulation results into aggregated data files, saved under `data/aggregated/`.
+Here, we demonstrate how to run 10 trials for an example policy of screening every 5 days using a pool size of 10, under a test error model that accounts for the dilution effect. The script `src/run_experiments.sh` initiates the simulation runs with results saved under `data/raw/`. On a 4-core machine with 32G memory, one simulation run for naive pooling takes 10-20 minutes; one simulation run for correlated pooling takes 3-4 hours. The notebook `notebooks/aggregate_raw_data.ipynb` shows how to convert the raw simulation results into aggregated data files, saved under `data/aggregated/`.
 
 
 We also include the aggregated data from the complete simulation runs under `data/aggregated_final/`. The notebook `notebooks/aggregate_raw_data_final.ipynb` logs the process of converting the complete raw simulation results into aggregated files. All figure reproduction notebooks are based on the data in `data/aggregated_final/`.
