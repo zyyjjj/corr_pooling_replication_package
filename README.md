@@ -15,26 +15,23 @@ We provide information about the simulation in this folder.
 
 - src/
 	- Our simulation codebase is partly based on the SEIRS+ library (https://github.com/ryansmcgee/seirsplus). In particular, `FARZ.py`, `models.py`, `networks.py`, and `utilities.py` are inherited from SEIRS+. 
-- `assignment.py`: assignment of screening groups and formation of community and household-correlated pools
+	- `assignment.py`: assignment of screening groups and formation of community and household-correlated pools
 	- `pooled_test.py`: implementation of the two-stage Dorfman procedure.
 	- `viral_model.py`: an extended SEIRS+ stochastic network model, `ViralExtSEIRNetworkModel`, where each node has a viral load that is dynamically updated as time progresses and they transition through different states. 
 	- `sim_loops_pooled_test.py`: the runner class of the `ViralExtSEIRNetworkModel` model 	that enables simulation and logging.
-- `run_meta_simulation_g2.py`: the wrapper functions for running simulation of different configurations.
+	- `run_meta_simulation_g2.py`: the wrapper functions for running simulation of different configurations.
 	- `run_experiments.sh`: the master script for running multiple replications of simulations of different configurations.
 
-
-
-
 - data/
- - raw/
- - aggregated/
- - aggregated_final/
-
+	- raw/
+	- aggregated/
+	- aggregated_final/
 
 - notebooks/
- - converting raw simulation results to aggregated data
- - making figures
-- figures
+	- converting raw simulation results to aggregated data
+	- making figures
+
+- figures/
 
 
 Our results in the paper are based on 200 trials per parameter configuration (screening policy and test error model). We aggregate the raw simulation results by computing several key metric statistics, which are then used for further analysis and visualization. 
